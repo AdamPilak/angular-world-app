@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { API_URL } from 'src/environments/environment';
-import { concat, firstValueFrom, lastValueFrom, map, Observable } from 'rxjs';
+import { concat, map, Observable } from 'rxjs';
 import { Region } from '../models/region.model';
 import { Country } from '../models/country.model';
 import { CountryDetails } from '../models/countryDetails.model';

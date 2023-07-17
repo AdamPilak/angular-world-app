@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Country } from 'src/app/models/country.model';
 import { ApiService } from 'src/app/services/api.service';
 
