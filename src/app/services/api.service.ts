@@ -7,6 +7,7 @@ import { Country } from '../models/country.model';
 import { CountryDetails } from '../models/countryDetails.model';
 
 const REGION_ENDPOINT = 'region';
+const TRANSLATION_ENDPOINT = 'translation';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +17,14 @@ export class ApiService {
 
   getRegionByName(regionName: string): Observable<Region> {
     return this.http
-      .get(`${API_URL}/${REGION_ENDPOINT}/${regionName}?fields=name,flags,translations`)
+      .get(
+        `${API_URL}/${REGION_ENDPOINT}/${regionName}?fields=name,flags,translations`
+      )
       .pipe(
-        map((countries) => ({ name: regionName, countries: countries as Country[] }))
+        map((countries) => ({
+          name: regionName,
+          countries: countries as Country[],
+        }))
       );
   }
 
@@ -40,5 +46,9 @@ export class ApiService {
     ]);
 
     return defaultRegionsSequence;
+  }
+
+  getTranslation(name: string): Observable<string> {
+    return this.http.get<string>(`${API_URL}/${TRANSLATION_ENDPOINT}/${'warsaw'}`);
   }
 }

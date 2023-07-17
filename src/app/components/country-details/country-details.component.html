@@ -2,7 +2,7 @@
 
 <div class="centering-col-container">
     <div class="restrictive-container">
-        <h1 class="header">{{country?.name?.common}}</h1>
+        <h1 class="header">{{country?.translations?.pol?.common}}</h1>
         <div class="country-details">
             <div style="text-align: center; padding: 3rem" *ngIf="this.errorMessage !== ''">{{this.errorMessage}}</div>
             <ng-container *ngIf="errorMessage === ''">
