@@ -21,6 +21,8 @@ export class CountryListComponent implements OnInit {
       .getRegionByName(this.regionName!)
       .subscribe({next: (region) => {
         this.countries = region.countries;
+        this.countries.sort((a, b) => a.translations.pol.common.localeCompare(b.translations.pol.common));
+        
       }, error: () => this.errorMessage = 'Countries not found.'});
   }
 

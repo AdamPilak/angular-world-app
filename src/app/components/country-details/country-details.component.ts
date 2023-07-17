@@ -20,6 +20,7 @@ export class CountryDetailsComponent implements OnInit {
     this.regionName = this.route.snapshot.params['region']
     let countryName = this.route.snapshot.params['country']
     this.api.getCountryDetailsByName(countryName).subscribe({next: countryDetails => {
+      console.log(countryDetails)
       this.country = countryDetails
       this.currency = Object.values(countryDetails.currencies)[0]['symbol']
     }, error: () => this.errorMessage = "Country not found."})

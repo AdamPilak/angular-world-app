@@ -7,7 +7,7 @@
                     <div style="text-align: center" *ngIf="this.errorMessage !== ''">{{this.errorMessage}}</div>
                     <li class="list-item" *ngFor="let country of countries" (click)="navigateToCountryDetails(country.name.common.toLowerCase())">
                         <img src="{{country.flags.png}}" alt="">
-                        <div>{{country.name.common}}</div>
+                        <div>{{country.translations.pol.common}}</div>
                     </li>
                 </ul>
             </div>
