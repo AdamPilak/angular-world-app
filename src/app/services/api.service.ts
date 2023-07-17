@@ -47,8 +47,4 @@ export class ApiService {
 
     return defaultRegionsSequence;
   }
-
-  getTranslation(name: string): Observable<string> {
-    return this.http.get<string>(`${API_URL}/${TRANSLATION_ENDPOINT}/${'warsaw'}`);
-  }
 }

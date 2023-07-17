@@ -10,7 +10,6 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class CountryListComponent implements OnInit {
   regionName?: string;
-  translatedRegionName?: string;
   countries: Country[] = [];
   errorMessage: string = '';
 
@@ -25,8 +24,6 @@ export class CountryListComponent implements OnInit {
         this.countries.sort((a, b) => a.translations.pol.common.localeCompare(b.translations.pol.common));
         
       }, error: () => this.errorMessage = 'Countries not found.'});
-
-    this.api.getTranslation(this.regionName!).subscribe(data => console.log(data))
   }
 
   navigateToCountryDetails(countryName: string) {
