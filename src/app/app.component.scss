@@ -1,0 +1,15 @@
+@import "../styles/colors";
+
+main {
+    background-image: url(../assets/images/background_1920.jpeg);
+    background-size: cover;
+    height: 100%;
+}
+
+footer {
+    height: 4rem;
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+}

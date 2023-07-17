@@ -1,0 +1,27 @@
+@import "../../styles/colors";
+
+nav {
+    height: 4rem;
+    display: flex;
+    background-color: $dark-blue;
+    padding: 1rem 1.5rem;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            height: 2rem;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+    }
+
+    .back-btn {
+        margin-left: auto;
+    }
+}

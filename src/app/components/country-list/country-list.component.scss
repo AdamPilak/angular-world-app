@@ -1,0 +1,49 @@
+@import "../../styles/colors";
+
+.restrictive-container {
+    max-width: 700px;
+    width: 100%;
+}
+
+.country-list-container {
+    background-color: $light-blue;
+    background: rgba(182, 209, 252,0.9);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.country-list {
+    list-style: none;
+    overflow-y: auto;
+    height: 500px;
+
+    .country-list-footer {
+        height: 3rem;
+        width: 100%;
+    }
+}
+
+.list-item {
+    display: flex;
+    background-color: $medium-blue;
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+    padding: .5rem;
+    cursor: pointer;
+
+    img {
+        height: 30px;
+        width: 50px;
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+

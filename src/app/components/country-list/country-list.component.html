@@ -1,0 +1,16 @@
+<app-navigation [backButton]="true" [navigate]="'regions'"></app-navigation>
+<div class="centering-col-container">
+    <div class="restrictive-container">
+        <h1 class="header">Region: {{regionName}}</h1>
+            <div class="country-list-container">
+                <ul class="country-list">
+                    <div style="text-align: center" *ngIf="this.errorMessage !== ''">{{this.errorMessage}}</div>
+                    <li class="list-item" *ngFor="let country of countries" (click)="navigateToCountryDetails(country.name.common.toLowerCase())">
+                        <img src="{{country.flags.png}}" alt="">
+                        <div>{{country.name.common}}</div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</div>
+

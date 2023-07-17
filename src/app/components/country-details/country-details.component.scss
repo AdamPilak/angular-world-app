@@ -1,0 +1,35 @@
+@import "../../styles/colors";
+
+.restrictive-container {
+    max-width: 700px;
+    width: 100%;
+}
+
+.country-details {
+    background-color: $light-blue;
+    background: rgba(182, 209, 252,0.9);
+    border-radius: 1rem;
+    margin: 2rem;
+
+    .country-details-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+
+        img {
+            height: 4rem;
+            width: 7rem;
+        }
+
+        div {
+            font-size: 4rem;
+        }
+    }
+
+    .country-details-row {
+        border-top: 1px solid black;
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+}

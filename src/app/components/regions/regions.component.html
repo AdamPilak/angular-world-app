@@ -1,0 +1,14 @@
+<app-navigation></app-navigation>
+<div class="centering-container">
+    <h1 class="header">Wybierz region</h1>
+</div>
+<div class="centering-container">
+    <div class="region-container">
+        <div *ngIf="this.errorMessage !== ''">{{this.errorMessage}}</div>
+        <ul class="region-list">
+            <li class="region-item" *ngFor="let region of regions" (click)="navigateToCountries(region.name.toLowerCase())">{{region.name}}</li>
+        </ul>
+    </div>
+</div>
+
+

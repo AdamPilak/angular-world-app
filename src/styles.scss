@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-size: 1rem;
+    display: flex;
+    flex-grow: 1
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.header {
+    padding: 1rem;
+    background-color: #77a9fc;
+    border-radius: 1rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+}
+
+.centering-container {
+    display: flex;
+    justify-content: center;
+}
+
+.centering-col-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem;
+    width: 5rem;
+    background-color: #77a9fc;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}

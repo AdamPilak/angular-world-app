@@ -1,0 +1,25 @@
+<app-navigation [backButton]="true" [navigate]="this.regionName + '/countries'"></app-navigation>
+
+<div class="centering-col-container">
+    <div class="restrictive-container">
+        <h1 class="header">{{country?.name?.common}}</h1>
+        <div class="country-details">
+            <div style="text-align: center; padding: 3rem" *ngIf="this.errorMessage !== ''">{{this.errorMessage}}</div>
+            <ng-container *ngIf="errorMessage === ''">
+                <div class="country-details-header">
+                    <img src="{{country?.flags?.png}}" alt="">
+                    <div>{{country?.fifa}}</div>
+                </div>
+                <div class="country-details-row">
+                    Stolica : {{country?.capital}}
+                </div>
+                <div class="country-details-row">
+                    Waluta : {{this.currency}}
+                </div>
+                <div class="country-details-row">
+                    Populacja : {{country?.population}}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
