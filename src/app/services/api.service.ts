@@ -7,7 +7,6 @@ import { Country } from '../models/country.model';
 import { CountryDetails } from '../models/countryDetails.model';
 
 const REGION_ENDPOINT = 'region';
-const TRANSLATION_ENDPOINT = 'translation';
 
 @Injectable({
   providedIn: 'root',
